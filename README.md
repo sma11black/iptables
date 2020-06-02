@@ -1,5 +1,5 @@
 # redirect
-Run a Dockerized iptables instance to redirect network traffic to a new IP.
+A Dockerized iptables instance to redirect network traffic to a new IP.
 
 ## Features
 - TCP/UDP support

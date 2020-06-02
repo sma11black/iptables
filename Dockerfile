@@ -1,6 +1,6 @@
 FROM alpine:latest
 LABEL version="1.0"
-LABEL description="Run a Dockerized iptables instance \
+LABEL description="A Dockerized iptables instance \
 to redirect network traffic to a new IP."
 LABEL maintainer="smallblack@outlook.com"
 
