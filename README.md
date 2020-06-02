@@ -3,7 +3,7 @@ A Dockerized iptables instance to redirect network traffic to a new IP.
 
 ## Features
 - TCP/UDP support
-- Range ports support
+- Multiple ports & port range support
 
 ## Usage
 *Requirenment tips*: For interacting with the network stack, you **should** use `--cap-add=NET_ADMIN` to modify the iptables.
