@@ -1,10 +1,9 @@
-# redirect
+# Redirect
 A Dockerized iptables instance to redirect network traffic to a new IP.
 
 ## Features
 - TCP/UDP support
 - Range ports support
-- IPv6 support
 
 ## Usage
 *Requirenment tips*: For interacting with the network stack, you **should** use `--cap-add=NET_ADMIN` to modify the iptables.
@@ -13,7 +12,7 @@ A Dockerized iptables instance to redirect network traffic to a new IP.
   
   For incoming **TCP:80** and **UDP:1234-1236** redirect to **DESTINATION_IP:1.1.1.1**.
 
-### Docker Run
+### Docker command line
 #### Foreground mode
 ```shell
 $ docker run --name=ip-redirect -it --rm --cap-add=NET_ADMIN \
@@ -81,4 +80,5 @@ For a TCP trace route
 $ traceroute -T -p 80 <IP address/hostname>
 ```
 
-
+## Feature TO-DO
+- IPv6 support: consider to create a new image or add ip6tables.
