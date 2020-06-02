@@ -2,7 +2,7 @@
 DEST_IP=${DESTINATION_IP:-127.0.0.1}
 
 # check for privileged access
-iptables -t nat -L -n -v --line-numbers
+iptables -t nat -L -n -v --line-numbers >/dev/null 2>&1
 if ! [ $? -eq 0 ]; then
   echo "Sorry, '--cap-add=NET_ADMIN' flag is required to be set for using iptables"; exit 1;
 fi
