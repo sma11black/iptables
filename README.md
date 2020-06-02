@@ -61,24 +61,5 @@ $ docker-compose up -d
 - **TCP_PORTS** (Optional) Support multiple ports and port range. For enumerated ports, you should separate with `,`. For port range, both of `:` or `-` is working. e.g. `80,443,1234:1236` or `80,443,1234-1236`.
 - **UDP_PORTS** (Optional) Same rules with **TCP_PORTS**.
 
-## Testing Connectivity
-For Debian/Ubuntu
-
-1. First you need to install the `traceroute` package(`ncat` tool can also be considered)
-```shell
-$ sudo apt install -y net-tools traceroute
-```
-
-2. Run trace route
-For a UDP trace route
-```shell
-$ traceroute -p 1234 <IP address/hostname>
-```
-
-For a TCP trace route
-```shell
-$ traceroute -T -p 80 <IP address/hostname>
-```
-
 ## Feature TO-DO
 - IPv6 support: consider to create a new image or add ip6tables.
