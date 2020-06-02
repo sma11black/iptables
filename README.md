@@ -18,7 +18,7 @@ A Dockerized iptables instance to redirect network traffic to a new IP.
 $ docker run --name=ip-redirect -it --rm --cap-add=NET_ADMIN \
     -p 80:80/tcp -p 1234-1236:1234-1236/udp \
     -e "TCP_PORTS=80" -e "UDP_PORTS=1234-1236" -e "DESTINATION_IP=1.1.1.1" \
-    smallblack/redirect-latest
+    smallblack/redirect
 ```
 
 #### Detached mode
@@ -26,7 +26,7 @@ $ docker run --name=ip-redirect -it --rm --cap-add=NET_ADMIN \
 $ docker run --name=ip-redirect -d --rm --cap-add=NET_ADMIN \
     -p 80:80/tcp -p 1234-1236:1234-1236/udp \
     -e "TCP_PORTS=80" -e "UDP_PORTS=1234-1236" -e "DESTINATION_IP=1.1.1.1" \
-    smallblack/redirect-latest
+    smallblack/redirect
 ```
 
 ### Docker-compose
@@ -34,9 +34,9 @@ $ docker run --name=ip-redirect -d --rm --cap-add=NET_ADMIN \
 version: '3'
 services:
   ip-redirect:
-    image: smallblack/redirect-latest
+    image: smallblack/redirect
     container_name: ip-redirect
-    cap-add: 
+    cap_add: 
       - NET_ADMIN
     ports:
       - "80:80/tcp"
