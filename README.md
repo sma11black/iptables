@@ -33,7 +33,7 @@ $ docker run --name=ip-redirect -d --rm --cap-add=NET_ADMIN \
 ```yaml
 version: '3'
 services:
-  iptables:
+  ip-redirect:
     image: smallblack/redirect-latest
     container_name: ip-redirect
     cap-add: 
